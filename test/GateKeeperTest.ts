@@ -84,7 +84,7 @@ describe("SignUp", function () {
     )
   })
 
-  it("Fai if caller is not MACI contract", async () => {
+  it("Fail if caller is not MACI contract", async () => {
     const signUpGatekeeperData = ethers.utils.defaultAbiCoder.encode(["uint256"], [3])
     await expect(
       gateKeeper.connect(ethersSigner).register(await ethersSigner.getAddress(), signUpGatekeeperData)
