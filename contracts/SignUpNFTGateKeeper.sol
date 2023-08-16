@@ -6,7 +6,6 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
 import { SignUpGatekeeper } from "./SignUpGatekeeper.sol";
 import { TestMACI } from "./TestMACI.sol";
-import "hardhat/console.sol";
 
 contract SignUpNFTGatekeeper is SignUpGatekeeper, Ownable {
     ERC1155 public nft;
