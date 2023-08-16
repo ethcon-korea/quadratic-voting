@@ -50,7 +50,7 @@ describe("SignUp", function () {
       if (result.ownedNfts.length < 1) {
         console.log("Do not have NFT ticket")
       } else {
-        var tokenId = result.ownedNfts[0].tokenId // TODO. 여러 개 가진경우 선택한 NFT 아이디만 넘겨주게?
+        var tokenId = result.ownedNfts[0].tokenId
         console.log("📌 token ID:", tokenId)
         // Check on-chain
         const holderSigner = await ethers.getImpersonatedSigner(holder)
