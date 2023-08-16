@@ -25,7 +25,7 @@ const config: HardhatUserConfig = {
       allowUnlimitedContractSize: true,
       blockGasLimit: 30_000_000,
       forking: {
-        url: "https://rpc.ankr.com/optimism",
+        url: "https://opt-mainnet.g.alchemy.com/v2/" + process.env.ALCHEMY_API_KEY,
         enabled: true,
         blockNumber: 107805900,
       },
@@ -43,11 +43,6 @@ const config: HardhatUserConfig = {
     sources: "./contracts",
     cache: "./cache",
     artifacts: "./artifacts",
-  },
-  etherscan: {
-    apiKey: {
-      optimism: `${process.env.OPTIMISM_SCAN_API_KEY}`,
-    },
   },
 }
 
